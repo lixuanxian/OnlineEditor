@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 在线编辑器 </title>
+        <link rel="stylesheet" href="../lib/CodeMirror/lib/codemirror.css">
+        <link rel="stylesheet" href="../lib/CodeMirror/theme/rubyblue.css">
+        <link rel="stylesheet" href="../lib/CodeMirror/doc/docs.css">
+        <link rel="stylesheet" href="index.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="../lib/CodeMirror/lib/codemirror.js"></script>
+        <script src="../lib/CodeMirror/mode/css/css.js"></script>
+        <script src="../lib/CodeMirror/mode/xml/xml.js"></script>
+        <script src="../lib/CodeMirror/addon/edit/closetag.js"></script>
+        <script src="../lib/CodeMirror/mode/javascript/javascript.js"></script>
+        <script src="../lib/CodeMirror/mode/htmlmixed/htmlmixed.js"></script>
+        <!--     <script src="../lib/CodeMirror/addon/jshint.js"></script>  -->
+        
+    </head>
+    <body>
+        <div id="title"></div>
+         <div id="main-content">
+            <fieldset class="editorSet set-left">
+                <div class="code code-top  js">
+                    <span class="hints"> <span>JavaScript </span>  </span>
+                    <textarea id="code-js" name="code-js">
+      var canvas = document.getElementById('pane');
+      var context = canvas.getContext('2d');
+       context.fillStyle = 'rgb(250,0,0)';
+       context.fillRect(10, 10, 55, 50);
+       context.fillStyle = 'rgba(0, 0, 250, 0.5)';
+       context.fillRect(30, 30, 55, 50);
+                    </textarea>
+                </div>
+                <div class="handler-resize resize-horizontal"  ></div>
+                <div class="code  code-bottom  html">
+                    <span class="hints"><span>HTML</span> </span>
+                    <textarea id="code-html" name="code-html">
+  <head>
+    <meta charset=utf-8>
+    <title>HTML5 canvas demo</title>
+   </head>
+   <body>
+    <p>Canvas pane goes here:</p>
+    <canvas id=pane width=300 height=200></canvas>
+        
+  </body>
+                    </textarea>
+                </div>
+            </fieldset>
+            <div class="handler-resize resize-vertical"  ></div>
+            <fieldset class="editorSet set-right">
+                <div class="code code-top css">
+                 <span class="hints"><span>CSS</span> </span>
+        
+                    <textarea id="code-css" name="code-css">
+ p {font-family: monospace;} 
+                    </textarea> 
+                       
+                </div>
+                <div class="handler-resize resize-horizontal"  ></div>
+                <div class="code code-bottom preview">
+                    <span class="hints"><span>Preview</span> </span>
+        
+                    <iframe id="code-preview"></iframe>
+                </div>
+            </fieldset>
+        
+        </div>
+        <div id="menu"><a href="#"><img alt="菜单" src="img/menu.png" /></a></div>
+        <script src="index.js"></script>
+         
+    </body>
+</html>
